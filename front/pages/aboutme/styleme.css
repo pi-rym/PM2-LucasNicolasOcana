@@ -10,7 +10,9 @@
   align-items: center; /* Alinea verticalmente los elementos */
   justify-content: center; /* Alinea horizontalmente los elementos */
   gap: 0px; /* Espacio entre los elementos */
+  margin-top: 25px;
 }
+
 .footer-content h2 {
   color: white;
   margin-left: 150px;
@@ -81,68 +83,6 @@ ul {
 }
 .item:nth-child(4) {
   --bg-color: #000;
-}
-
-.movies-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 1em;
-}
-
-.card {
-  width: 400px;
-  margin: 20px;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    7deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(108, 46, 35, 1) 83%,
-    rgba(121, 26, 9, 0.7483368347338936) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  margin-bottom: 5em;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card h3 {
-  margin-top: 10px;
-  font-size: 20px;
-  color: white;
-}
-
-.card p {
-  font-size: 14px;
-  color: white;
-}
-
-.titulo {
-  color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  border-radius: 25px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    7deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(108, 46, 35, 1) 83%,
-    rgba(121, 26, 9, 0.7483368347338936) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  max-width: 20%;
-  justify-content: center;
-  text-align: center;
-  margin-inline: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 body {
