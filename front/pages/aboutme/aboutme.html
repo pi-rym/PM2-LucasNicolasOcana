@@ -148,14 +148,30 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="text-center mb-4">Formulario de Contacto</h4>
-                <form>
+                <form id="contactForm">
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, ingrese su nombre.
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" />
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, ingrese un correo electrónico válido.
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="mensaje">Mensaje</label>
@@ -163,7 +179,11 @@
                       class="form-control"
                       id="mensaje"
                       rows="5"
+                      required
                     ></textarea>
+                    <div class="invalid-feedback">
+                      Por favor, ingrese un mensaje.
+                    </div>
                   </div>
                   <div class="form-group text-center">
                     <button type="submit" class="btn btn-primary">

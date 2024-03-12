@@ -2,7 +2,7 @@ const renderCards = require("../scripts/renderCards");
 const axios = require("axios");
 
 axios
-  .get("https://students-api.2.us-1.fl0.io/movies")
+  .get("https://students-api.up.railway.app/movies")
   .then((response) => {
     console.log("Respuesta exitosa:", response.data);
     renderCards(response.data);
