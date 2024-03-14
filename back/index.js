@@ -1,5 +1,7 @@
-const app = require("./server");
+const app = require("./src/server");
+
 const PORT = 3000;
+
 app.listen(PORT, () => {
-  console.log(`Servidor Express escuchando en el puerto ${PORT}`);
+  console.log(`Server listening on port ${PORT}`);
 });

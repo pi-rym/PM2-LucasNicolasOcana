@@ -1,9 +1,16 @@
 const express = require("express");
+const morgan = require("morgan");
+const cors = require("cors");
 
-const moviesController = require("./moviesController");
+const indexRouter = require("./routes/index");
 
 const app = express();
 
-app.get("/movies", moviesController);
+app.use(morgan("dev"));
+app.use(cors());
+
+app.use(express.json());
+
+app.use(indexRouter);
 
 module.exports = app;
