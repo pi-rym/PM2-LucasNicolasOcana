@@ -10,6 +10,7 @@
   align-items: center; /* Alinea verticalmente los elementos */
   justify-content: center; /* Alinea horizontalmente los elementos */
   gap: 0px; /* Espacio entre los elementos */
+  margin-top: 25px;
 }
 .footer-content h2 {
   color: white;
@@ -17,6 +18,25 @@
   font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+.el-titulo {
+  color: white;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    7deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(108, 46, 35, 1) 83%,
+    rgba(121, 26, 9, 0.7483368347338936) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 ul {
@@ -83,56 +103,15 @@ ul {
   --bg-color: #000;
 }
 
-.movies-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 1em;
-}
-
-.card {
-  width: 400px;
-  margin: 20px;
+.el-titulo {
   color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    7deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(108, 46, 35, 1) 83%,
-    rgba(121, 26, 9, 0.7483368347338936) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  margin-bottom: 5em;
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card h3 {
-  margin-top: 10px;
-  font-size: 20px;
-  color: white;
-}
-
-.card p {
-  font-size: 14px;
-  color: white;
-}
-
-.titulo {
-  color: white;
+  text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border-radius: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10px;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     7deg,
@@ -141,12 +120,6 @@ ul {
     rgba(121, 26, 9, 0.7483368347338936) 100%,
     rgba(0, 212, 255, 1) 100%
   );
-  max-width: 20%;
-  justify-content: center;
-  text-align: center;
-  margin-inline: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 body {
@@ -163,7 +136,6 @@ body {
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   background-attachment: fixed;
-  text-align: center;
 }
 
 @keyframes gradient {
@@ -224,4 +196,48 @@ body {
   100% {
     transform: translateX(1);
   }
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
 }
