@@ -1,7 +1,13 @@
 const app = require("./src/server");
 
-const PORT = 3000;
+const dbCon = require("./src/config/conDB");
 
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+const PORT = 3000;
+dbCon()
+  .then((res) => {
+    console.log("Connected to MongoDB Atlas");
+    app.listen(PORT, () => {
+      console.log(`Server listening on port ${PORT}`);
+    });
+  })
+  .catch((err) => console.error("Error connecting to MongoDB Atlas:", err));
