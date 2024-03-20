@@ -1,5 +1,3 @@
-// moviesServices.js
-
 const Movie = require("../models/movieModel");
 
 const getMovies = async () => {

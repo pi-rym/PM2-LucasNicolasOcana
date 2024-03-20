@@ -84,51 +84,105 @@
       </div>
     </header>
     <main>
-      <form id="movieForm" action="#" method="post">
-        <label for="title">Título:</label><br />
-        <input type="text" id="title" name="title" required /><br /><br />
+      <form id="movieForm" class="form" action="#" method="post">
+        <div class="form-title"><span></span></div>
 
-        <label for="year">Año:</label><br />
-        <input
-          type="number"
-          id="year"
-          name="year"
-          min="1800"
-          max="2099"
-          required
-        /><br /><br />
+        <div class="input-container">
+          <input
+            class="input-mail"
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Título"
+            required
+          />
+          <span></span>
+        </div>
 
-        <label for="director">Director:</label><br />
-        <input type="text" id="director" name="director" required /><br /><br />
+        <div class="input-container">
+          <input
+            class="input-mail"
+            type="number"
+            id="year"
+            name="year"
+            placeholder="Año"
+            min="1800"
+            max="2099"
+            required
+          />
+          <span></span>
+        </div>
 
-        <label for="rate">Calificación:</label><br />
-        <input
-          type="number"
-          id="rate"
-          name="rate"
-          min="0"
-          max="10"
-          step="0.1"
-          required
-        /><br /><br />
+        <div class="input-container">
+          <input
+            class="input-mail"
+            type="text"
+            id="director"
+            name="director"
+            placeholder="Director"
+            required
+          />
+          <span></span>
+        </div>
 
-        <label for="genre">Género:</label><br />
-        <input type="text" id="genre" name="genre" required /><br /><br />
+        <div class="input-container">
+          <input
+            class="input-mail"
+            type="number"
+            id="rate"
+            name="rate"
+            placeholder="Calificación"
+            min="0"
+            max="10"
+            step="0.1"
+            required
+          />
+          <span></span>
+        </div>
 
-        <label for="poster">URL del Póster:</label><br />
-        <input type="url" id="poster" name="poster" required /><br /><br />
+        <div class="input-container">
+          <input
+            class="input-mail"
+            type="text"
+            id="genre"
+            name="genre"
+            placeholder="Género"
+            required
+          />
+          <span></span>
+        </div>
 
-        <label for="duration">Duración:</label><br />
-        <input
-          type="text"
-          id="duration"
-          name="duration"
-          min="1"
-          required
-        /><br /><br />
+        <div class="input-container">
+          <input
+            class="input-mail"
+            type="url"
+            id="poster"
+            name="poster"
+            placeholder="URL del Póster"
+            required
+          />
+          <span></span>
+        </div>
 
-        <input type="reset" id="clearButton" value="Limpiar" />
-        <input type="submit" id="submitButton" value="Enviar" />
+        <div class="input-container">
+          <input
+            class="input-mail"
+            type="text"
+            id="duration"
+            name="duration"
+            placeholder="Duración"
+            min="1"
+            required
+          />
+          <span></span>
+        </div>
+
+        <button type="reset" class="clearButton" value="Limpiar">
+          Limpiar Formulario
+        </button>
+        <button type="submit" class="submitButton" value="Enviar">
+          Agregar Película
+        </button>
       </form>
     </main>
 

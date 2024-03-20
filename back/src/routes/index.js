@@ -1,5 +1,3 @@
-// routes/index.js
-
 const { Router } = require("express");
 const moviesController = require("../controllers/moviesController");
 const { validateMovieData } = require("../middleware/validationMiddleware");

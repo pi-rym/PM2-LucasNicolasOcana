@@ -1,5 +1,3 @@
-// moviesControllers.js
-
 const { getMovies, createMovie } = require("../services/moviesServices");
 
 module.exports = {
