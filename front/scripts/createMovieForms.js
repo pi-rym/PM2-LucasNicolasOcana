@@ -8,7 +8,6 @@ function clearFormInputs() {
     input.value = "";
   });
 
-  // Alerta de formulario limpiado
   alert("El formulario se liberó para crear otra pelicula!");
 }
 
@@ -17,7 +16,6 @@ function submitForm(movieData) {
     .post("http://localhost:3000/movies", movieData)
     .then((response) => {
       console.log("Película creada exitosamente:", response.data);
-      // Alerta de película enviada
       alert("Película creada exitosamente! Revise el INICIO por favor!");
     })
     .catch((error) => {
