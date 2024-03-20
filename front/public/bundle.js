@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./scripts/createMovieForms.js":
+/*!*************************************!*\
+  !*** ./scripts/createMovieForms.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\nfunction clearFormInputs() {\r\n  const form = document.getElementById(\"movieForm\");\r\n  const inputs = form.querySelectorAll(\"input\");\r\n\r\n  inputs.forEach((input) => {\r\n    input.value = \"\";\r\n  });\r\n}\r\n\r\nfunction submitForm(movieData) {\r\n  axios\r\n    .post(\"http://localhost:3000/movies\", movieData)\r\n    .then((response) => {\r\n      console.log(\"Película creada exitosamente:\", response.data);\r\n    })\r\n    .catch((error) => {\r\n      console.error(\"Error al crear la película:\", error);\r\n    });\r\n}\r\n\r\nfunction handleSubmitForm(event) {\r\n  event.preventDefault();\r\n\r\n  const form = document.getElementById(\"movieForm\");\r\n  const inputs = form.querySelectorAll(\"input\");\r\n\r\n  let allFieldsFilled = true;\r\n  const movieData = {};\r\n\r\n  inputs.forEach((input) => {\r\n    if (input.value.trim() === \"\") {\r\n      allFieldsFilled = false;\r\n    } else {\r\n      movieData[input.name] = input.value;\r\n    }\r\n  });\r\n\r\n  if (allFieldsFilled) {\r\n    submitForm(movieData);\r\n  } else {\r\n    console.log(\"Por favor, completa todos los campos.\");\r\n  }\r\n}\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n  const movieForm = document.getElementById(\"movieForm\");\r\n\r\n  movieForm.addEventListener(\"submit\", function (event) {\r\n    event.preventDefault();\r\n\r\n    const title = document.getElementById(\"title\").value.trim();\r\n    const year = document.getElementById(\"year\").value.trim();\r\n    const director = document.getElementById(\"director\").value.trim();\r\n    const rate = document.getElementById(\"rate\").value.trim();\r\n    const genre = document.getElementById(\"genre\").value.trim();\r\n    const poster = document.getElementById(\"poster\").value.trim();\r\n    const duration = document.getElementById(\"duration\").value.trim();\r\n\r\n    if (\r\n      !title ||\r\n      !year ||\r\n      !director ||\r\n      !rate ||\r\n      !genre ||\r\n      !poster ||\r\n      !duration\r\n    ) {\r\n      alert(\"Por favor, completa todos los campos.\");\r\n      return;\r\n    }\r\n  });\r\n});\r\n\r\nmodule.exports = { clearFormInputs, handleSubmitForm };\r\n\n\n//# sourceURL=webpack://front/./scripts/createMovieForms.js?");
+
+/***/ }),
+
 /***/ "./scripts/index.js":
 /*!**************************!*\
   !*** ./scripts/index.js ***!
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const renderCards = __webpack_require__(/*! ../scripts/renderCards */ \"./scripts/renderCards.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\naxios\r\n  .get(\"http://localhost:3000/movies\")\r\n  .then((response) => {\r\n    console.log(\"Respuesta exitosa:\", response.data);\r\n    renderCards(response.data);\r\n  })\r\n  .catch((error) => {\r\n    console.error(\"Error al realizar la petición:\", error);\r\n  });\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const renderCards = __webpack_require__(/*! ../scripts/renderCards */ \"./scripts/renderCards.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\nconst {\r\n  clearFormInputs,\r\n  handleSubmitForm,\r\n} = __webpack_require__(/*! ../scripts/createMovieForms */ \"./scripts/createMovieForms.js\");\r\n\r\naxios\r\n  .get(\"http://localhost:3000/movies\")\r\n  .then((response) => {\r\n    console.log(\"Respuesta exitosa:\", response.data);\r\n    renderCards(response.data);\r\n  })\r\n  .catch((error) => {\r\n    console.error(\"Error al realizar la petición:\", error);\r\n  });\r\n\r\ndocument\r\n  .getElementById(\"movieForm\")\r\n  .addEventListener(\"submit\", handleSubmitForm);\r\ndocument\r\n  .getElementById(\"clearButton\")\r\n  .addEventListener(\"click\", clearFormInputs);\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 

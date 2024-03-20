@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario de Películas</title>
+    <title>FORM MOVIES</title>
     <link rel="stylesheet" href="../createmov/resetcreat.css" />
     <link rel="stylesheet" href="../createmov/stylecreat.css" />
     <link
@@ -62,13 +62,18 @@
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">HISTORIA DEL CINE</a>
+                <a class="nav-link" href="../history/history.html"
+                  >HISTORIA DEL CINE</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../coding/coding.html">CODING</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../aboutme/aboutme.html">ABOUT ME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">AGREGAR PELÍCULAS</a>
               </li>
             </ul>
           </div>
@@ -79,7 +84,7 @@
       </div>
     </header>
     <main>
-      <form action="#" method="post">
+      <form id="movieForm" action="#" method="post">
         <label for="title">Título:</label><br />
         <input type="text" id="title" name="title" required /><br /><br />
 
@@ -113,16 +118,17 @@
         <label for="poster">URL del Póster:</label><br />
         <input type="url" id="poster" name="poster" required /><br /><br />
 
-        <label for="duration">Duración (minutos):</label><br />
+        <label for="duration">Duración:</label><br />
         <input
-          type="number"
+          type="text"
           id="duration"
           name="duration"
           min="1"
           required
         /><br /><br />
 
-        <input type="submit" value="Enviar" />
+        <input type="reset" id="clearButton" value="Limpiar" />
+        <input type="submit" id="submitButton" value="Enviar" />
       </form>
     </main>
 
@@ -148,5 +154,6 @@
         <h2>PATROCINADO / By Henry</h2>
       </div>
     </footer>
+    <script src="../../public/bundle.js"></script>
   </body>
 </html>

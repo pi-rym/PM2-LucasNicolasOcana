@@ -202,42 +202,48 @@ h2 {
   text-align: center;
 }
 
+/* Estilo del Formulario */
 form {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
-  background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Cambia el color de fondo del formulario */
 }
 
-label {
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="url"] {
+form input[type="text"],
+form input[type="number"],
+form input[type="url"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  border-radius: 5px; /* Añade bordes redondeados a los campos de entrada */
 }
 
+/* Efecto Hover para los Botones */
+input[type="reset"],
 input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
   background-color: #007bff;
-  color: #fff;
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s; /* Agrega transiciones suaves */
 }
 
+input[type="reset"]:hover,
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cambia el color de fondo en hover */
+}
+
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Agrega una sombra al enfocar */
 }

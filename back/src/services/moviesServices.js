@@ -1,3 +1,5 @@
+// moviesServices.js
+
 const Movie = require("../models/movieModel");
 
 const getMovies = async () => {
@@ -10,4 +12,15 @@ const getMovies = async () => {
   }
 };
 
-module.exports = { getMovies };
+const createMovie = async (movieData) => {
+  try {
+    const newMovie = new Movie(movieData);
+    await newMovie.save();
+    return newMovie;
+  } catch (error) {
+    console.error("Error creating movie:", error);
+    throw error;
+  }
+};
+
+module.exports = { getMovies, createMovie };
