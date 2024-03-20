@@ -1,16 +1,29 @@
 const validateMovieData = (req, res, next) => {
-  const { title, director, year } = req.body;
+  const data = req.body;
 
-  if (!title || !director || !year) {
+  const requiredFields = [
+    "title",
+    "poster",
+    "director",
+    "year",
+    "duration",
+    "genre",
+    "rate",
+  ];
+  const missingFields = requiredFields.filter((field) => !(field in data));
+
+  if (missingFields.length > 0) {
     return res.status(400).json({
-      error: "Todos los campos son obligatorios: title, director, year",
+      error: `Faltan los siguientes campos obligatorios: ${missingFields.join(
+        ", "
+      )}`,
     });
   }
 
-  if (isNaN(year) || year.length !== 4) {
+  if (isNaN(data.year) || data.year.toString().length !== 4) {
     return res
       .status(400)
-      .json({ error: "El año debe ser un número de 4 dígitos." });
+      .json({ error: "El año debe ser un número de 4 dígitos" });
   }
 
   next();
