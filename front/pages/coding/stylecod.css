@@ -7,9 +7,9 @@
 }
 .footer-content {
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos */
-  justify-content: center; /* Alinea horizontalmente los elementos */
-  gap: 0px; /* Espacio entre los elementos */
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
   margin-top: 25px;
 }
 
@@ -27,7 +27,7 @@ ul {
   gap: 2.5rem;
 }
 .item {
-  margin-left: 10px; /* Ajusta el espacio entre los iconos y el h2 según sea necesario */
+  margin-left: 10px;
 }
 .item a {
   text-decoration: none;
@@ -212,8 +212,6 @@ body {
   padding: 30px;
 }
 
-/* HEADING */
-
 .heading {
   text-align: center;
 }
@@ -236,8 +234,6 @@ body {
 .heading__credits .heading__link {
   color: inherit;
 }
-
-/* CARDS */
 
 .cards {
   display: flex;
@@ -306,8 +302,6 @@ body {
   align-self: center;
 }
 
-/* CARD BACKGROUNDS */
-
 .card-1 {
   background: radial-gradient(#1fe4f5, #3fbafe);
 }
@@ -327,8 +321,6 @@ body {
 .card-5 {
   background: radial-gradient(#f588d8, #c0a3e5);
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 1600px) {
   .cards {

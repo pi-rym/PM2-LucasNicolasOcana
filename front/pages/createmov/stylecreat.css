@@ -7,9 +7,9 @@
 }
 .footer-content {
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos */
-  justify-content: center; /* Alinea horizontalmente los elementos */
-  gap: 0px; /* Espacio entre los elementos */
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
   margin-top: 25px;
 }
 .footer-content h2 {
@@ -45,7 +45,7 @@ ul {
   gap: 2.5rem;
 }
 .item {
-  margin-left: 10px; /* Ajusta el espacio entre los iconos y el h2 según sea necesario */
+  margin-left: 10px;
 }
 .item a {
   text-decoration: none;
@@ -202,18 +202,12 @@ h2 {
   text-align: center;
 }
 
-/* Estilo del Formulario */
 form {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Cambia el color de fondo del formulario */
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 form input[type="text"],
@@ -222,9 +216,8 @@ form input[type="url"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 5px; /* Añade bordes redondeados a los campos de entrada */
+  border-radius: 5px;
 }
-/* Efecto Hover para los Botones */
 button[type="reset"],
 button[type="submit"] {
   background-color: #007bff;
@@ -233,18 +226,18 @@ button[type="submit"] {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Agrega transiciones suaves */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button[type="reset"]:hover,
 button[type="submit"]:hover {
-  background-color: #0056b3; /* Cambia el color de fondo en hover */
+  background-color: #0056b3;
 }
 
 button[type="reset"]:focus,
 button[type="submit"]:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Agrega una sombra al enfocar */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .form {
@@ -271,8 +264,6 @@ button[type="submit"]:focus {
   z-index: +1;
   margin-top: 3em;
 }
-
-/*------input and submit section-------*/
 
 .input-container {
   position: relative;
@@ -369,8 +360,6 @@ button[type="submit"]:focus {
   }
 }
 
-/*--------signup section---------*/
-
 .signup-link {
   color: #c0c0c0;
   font-size: 0.875rem;
@@ -387,8 +376,6 @@ button[type="submit"]:focus {
 .up:hover {
   text-decoration: underline;
 }
-
-/*--------header section-----------*/
 
 .form-title {
   font-size: 1.25rem;
@@ -464,8 +451,6 @@ button[type="submit"]:focus {
     opacity: 1;
   }
 }
-
-/*---------shooting stars-----------*/
 
 .bg-stars {
   position: absolute;

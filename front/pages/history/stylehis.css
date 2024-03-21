@@ -7,9 +7,9 @@
 }
 .footer-content {
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos */
-  justify-content: center; /* Alinea horizontalmente los elementos */
-  gap: 0px; /* Espacio entre los elementos */
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
   margin-top: 25px;
 }
 .footer-content h2 {
@@ -26,7 +26,7 @@ ul {
   gap: 2.5rem;
 }
 .item {
-  margin-left: 10px; /* Ajusta el espacio entre los iconos y el h2 según sea necesario */
+  margin-left: 10px;
 }
 .item a {
   text-decoration: none;
